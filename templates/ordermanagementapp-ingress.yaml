@@ -1,0 +1,53 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: '{{.Values.appName}}'
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+  - host: '{{.Values.hostName}}'
+    http:
+      paths:
+      - path: /{{.Values.microservices.Order Service.serviceName}}(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: '{{.Values.microservices.Order Service.serviceName}}'
+            port:
+              name: http
+      - path: /{{.Values.microservices.User-Service.serviceName}}(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: '{{.Values.microservices.User-Service.serviceName}}'
+            port:
+              name: http
+      - path: /{{.Values.microservices.orderservice.serviceName}}(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: '{{.Values.microservices.orderservice.serviceName}}'
+            port:
+              name: http
+      - path: /{{.Values.microservices.userservice.serviceName}}(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: '{{.Values.microservices.userservice.serviceName}}'
+            port:
+              name: http
+      - path: /{{.Values.microservices.cartservice.serviceName}}(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: '{{.Values.microservices.cartservice.serviceName}}'
+            port:
+              name: http
+      - path: /{{.Values.microservices.Cart Service.serviceName}}(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: '{{.Values.microservices.Cart Service.serviceName}}'
+            port:
+              name: http

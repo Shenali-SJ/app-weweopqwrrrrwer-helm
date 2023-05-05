@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: '{{.Values.microservices.Cart Service.serviceName}}'
+spec:
+  selector:
+    app: '{{.Values.microservices.Cart Service.serviceName}}'
+  ports:
+  - name: http
+    port: 80
+    targetPort: 0
+  type: ClusterIP

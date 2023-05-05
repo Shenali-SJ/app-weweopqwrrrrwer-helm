@@ -1,0 +1,100 @@
+projectId: app-weweopqwrrrrwer
+appName: ordermanagementapp
+description: First application
+imageURL: http://image.com/image
+version: 1.0.0
+hostName: ""
+clusterURL: ""
+clusterIPs: []
+microservices:
+  Cart Service:
+    serviceName: Cart Service
+    configs: []
+    avgReplicas: 0
+    minReplicas: 0
+    maxReplicas: 0
+    maxCPU: ""
+    maxMemory: ""
+    dockerImage: ""
+    containerPort: 0
+    envs: {}
+    serviceEvaluation:
+      kubeConfigType: []
+  Order Service:
+    serviceName: Order Service
+    configs: []
+    avgReplicas: 0
+    minReplicas: 0
+    maxReplicas: 0
+    maxCPU: ""
+    maxMemory: ""
+    dockerImage: ""
+    containerPort: 0
+    envs: {}
+    serviceEvaluation:
+      kubeConfigType:
+      - statefulSetBased
+  User-Service:
+    serviceName: User-Service
+    configs: []
+    avgReplicas: 0
+    minReplicas: 0
+    maxReplicas: 0
+    maxCPU: ""
+    maxMemory: ""
+    dockerImage: ""
+    containerPort: 0
+    envs: {}
+    serviceEvaluation:
+      kubeConfigType: []
+  cartservice:
+    serviceName: cartservice
+    configs: []
+    avgReplicas: 0
+    minReplicas: 0
+    maxReplicas: 0
+    maxCPU: ""
+    maxMemory: ""
+    dockerImage: ""
+    containerPort: 0
+    envs: {}
+    serviceEvaluation:
+      kubeConfigType: []
+  orderservice:
+    serviceName: orderservice
+    configs: []
+    avgReplicas: 0
+    minReplicas: 0
+    maxReplicas: 0
+    maxCPU: ""
+    maxMemory: ""
+    dockerImage: ""
+    containerPort: 0
+    envs: {}
+    serviceEvaluation:
+      kubeConfigType:
+      - statefulSetBased
+  userservice:
+    serviceName: userservice
+    configs: []
+    avgReplicas: 0
+    minReplicas: 0
+    maxReplicas: 0
+    maxCPU: ""
+    maxMemory: ""
+    dockerImage: ""
+    containerPort: 0
+    envs: {}
+    serviceEvaluation:
+      kubeConfigType: []
+monitoring: false
+evaluationResult:
+  language: Java
+  database: MySQL
+  hasdockerized: false
+  haskubernetesservice: false
+  haskubernetesdeployment: false
+  microservices:
+  - CartService
+  - OrderService
+  - UserService
